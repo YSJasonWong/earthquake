@@ -17,6 +17,9 @@ function setup() {
 function draw() {
   background(0);
   image(bg, width/2, height/2, width, width/ratio);
+  textSize(width*0.05);
+  textAlign(CENTER, CENTER);
+  text(`Last Earthquake Occured`, width/2, height*0.1);
   let x = map(data.lon, -180, 180, 0, width);
   let y = map(data.lat, -90, 90, height/2+width/ratio/2, height/2-width/ratio/2);
   fill(255, 0, 0);
@@ -30,7 +33,9 @@ function draw() {
   }
   fill(255);
   noStroke();
+  textSize(12);
+  textAlign(LEFT, BOTTOM);
+  text(`Last update: ${data.updateTime}`, 10, height-10);
   textAlign(RIGHT, BOTTOM);
   text(`Region: ${data.region}, Magitude: ${data.mag}, ${data.ptime}`, width-10, height-10);
-  
 }
