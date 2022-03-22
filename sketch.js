@@ -19,6 +19,8 @@ function draw() {
   image(bg, width/2, height/2, width, width/ratio);
   textSize(width*0.05);
   textAlign(CENTER, CENTER);
+  fill(255);
+  stroke(0);
   text(`Last Earthquake Occured`, width/2, height*0.1);
   fill(255, 0, 0);
   stroke(255, 0, 0);
